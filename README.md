@@ -1,5 +1,5 @@
 # mercado
-http://dkrvalho.github.io.mercado/
+https://dkrvalho.github.io/mercado/
 
 App simples de lista para compra em mercado, salvando dados apenas no storage por enquanto.
 
