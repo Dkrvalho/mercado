@@ -43,15 +43,22 @@ button i {
     pointer-events: none;
 }
 
-input, select {
+input, select, text{
     padding: .25rem .5rem;
-}
-
-input, select, textarea{
     color: #455a64;
+    background-color: #f6f6f6;
+    border: 0;
+    outline: 0;
 }
 
-textarea:focus, input:focus {
+text:focus, input:focus, select:focus {
+    color: #455a64;
+    background-color: #f6f6f6;
+    border: 1.5px solid #ff725e;
+    
+}
+
+input::placeholder{
     color: #455a64;
 }
 
@@ -98,18 +105,6 @@ textarea:focus, input:focus {
 }
 
 /* To Do toolbar */
-input, select, text{
-    color: #455a64;
-}
-
-text:focus, input:focus {
-    color: #455a64;
-}
-
-input::placeholder{
-    color: #455a64;
-}
-
 #toolbar {
     padding: 1rem;
     border-bottom: 1.5px solid #f6f6f6;
