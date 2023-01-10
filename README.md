@@ -1,4 +1,6 @@
 # mercado
+http://dkrvalho.github.io.mercado/
+
 App simples de lista para compra em mercado, salvando dados apenas no storage por enquanto.
 
 Este projeto fi realizado baseado na aula do Professor [Matheus Battisti](https://www.youtube.com/watch?v=HSssE1PRQcA)
