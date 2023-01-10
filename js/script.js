@@ -14,7 +14,7 @@ let oldInputValue;
 // Funções
 const saveTodo = (text, done = 0, save = 1) => {
     const todo = document.createElement("div")
-    todo.classList.add("todo")
+    todo.classList.add("todo");
 
     const todoTitle = document.createElement("h3")
     todoTitle.innerText = text;
@@ -38,16 +38,15 @@ const saveTodo = (text, done = 0, save = 1) => {
     // Utilizando daods da localStorage
     if (done) {
         todo.classList.add("done");
-    };
+    }
 
     if (save) {
         saveTodoLocalStorage({ text, done:0 });
-    };
+    }
 
     todoList.appendChild(todo);
 
     todoInput.value = "";
-    todoInput.focus();
 };
 
 const toggleForms = () => {
@@ -67,7 +66,7 @@ const updateTodo = (text) => {
 
             // Utilizando daods da localStorage
             updateTodoLocalStorage(oldInputValue, text);
-        };
+        }
     });
 };
 
@@ -123,7 +122,7 @@ todoForm.addEventListener("submit", (e) => {
     const inputValue = todoInput.value;
     if (inputValue) {
         saveTodo(inputValue);
-    };
+    }
 });
 
 document.addEventListener("click", (e) => {
@@ -132,28 +131,28 @@ document.addEventListener("click", (e) => {
     let todoTitle;
 
     if (parentElement && parentElement.querySelector("h3")) {
-        todoTitle = parentElement.querySelector("h3").innerText;
-    };
+        todoTitle = parentElement.querySelector("h3").innerText || "";
+    }
 
     if (targetElement.classList.contains("finish-todo")) {
         parentElement.classList.toggle("done"); //"add" somente adiciona enquanto o "toggle" adiciona se não tem e retira se tem.
 
         updateTodoStatusLocalStorage(todoTitle);
-    };
+    }
 
     if (targetElement.classList.contains("remove-todo")) {
         parentElement.remove();
 
         // Utilizando dados da localStorage
         removeTodoLocalStorage(todoTitle);
-    };
+    }
 
     if (targetElement.classList.contains("edit-todo")) {
         toggleForms();
 
         editInput.value = todoTitle;
         oldInputValue = todoTitle;
-    };
+    }
 });
 
 cancelEditBtn.addEventListener("click", (e) => {
@@ -162,7 +161,7 @@ cancelEditBtn.addEventListener("click", (e) => {
     toggleForms();
 });
 
-editForm.addEventListener("submit", (e) =>{
+editForm.addEventListener("submit", (e) => {
     e.preventDefault();
 
     const editInputValue = editInput.value;
@@ -229,7 +228,7 @@ const updateTodoStatusLocalStorage = (todoText) => {
 
     todos.map((todo) =>
         todo.text === todoText ? (todo.done = !todo.done) : null
-);
+    );
 
     localStorage.setItem("todos", JSON.stringify(todos));
 };
