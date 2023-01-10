@@ -98,6 +98,18 @@ textarea:focus, input:focus {
 }
 
 /* To Do toolbar */
+input, select, text{
+    color: #455a64;
+}
+
+text:focus, input:focus {
+    color: #455a64;
+}
+
+input::placeholder{
+    color: #455a64;
+}
+
 #toolbar {
     padding: 1rem;
     border-bottom: 1.5px solid #f6f6f6;
@@ -134,11 +146,11 @@ textarea:focus, input:focus {
 
 #filter select {
     flex: 1;
-    color: #ff725e;
+    color: #455a64;
 }
 
 #filter select option {
-    color: #ff725e;
+    color: #455a64;
 }
 
 /* To Do List */
