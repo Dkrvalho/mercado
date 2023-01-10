@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- JS -->
+    <script src="js/script.js" defer></script>
+    <!-- defer faz com que o js seja carregado após o html -->
+    <title>Lista de Compras</title>
+</head>
+<body>
+    <main class="container">
+        <header>
+            <h1>Lista de Compras</h1>
+        </header>
+        <form id="todo-form">
+            <p>Adicione o produto:</p>
+            <div class="form-control">
+                <input type="text" id="todo-input" placeholder="Qual produto comprar?">
+                <button type="submit" aria-label="adicionar">
+                    <i class="fa-thin fa-plus"></i>
+                </button>
+            </div>
+        </form>
+        <form id="edit-form" class="">
+            <p>Edite o produto</p>
+            <div c="form-control">
+                <input type="text" id="edit-input" aria-label="adicionar produto">
+                <button type="submit" aria-label="confirmar edição">
+                    <i class="fa-solid fa-check-double"></i>
+                </button>
+            </div>
+            <button id="cancel-edit-btn" type="submit">Cancelar</button>
+        </form>
+        <div id="toolbar">
+            <div id="search">
+                <h4>Pesquisar:</h4>
+                <form>
+                    <input type="text" id="search-input" placeholder="Buscar">
+                    <button id="erase-btn" aria-label="deletar" type="button">
+                        <i class="fa-solid fa-delete-left"></i>
+                    </button>
+                </form>
+            </div>
+            <div id="filter">
+                <h4>Filtrar:</h4>
+                <select id="filter-select" aria-label="selecionar">
+                    <option value="all">Todos</option>
+                    <option value="done">Comprados</option>
+                    <option value="todo">A comprar</option>
+                </select>
+            </div>
+        </div>
+        <div id="todo-list">
+            <div class="todo done">
+                <h3>Estou fazendo alguma coisa...</h3>
+                <button class="finish-todo" type="button" aria-label="finalizar">
+                    <i class="fa-solid fa-check"></i>
+                </button>
+                <button class="edit-todo" type="button" aria-label="editar">
+                    <i class="fa-solid fa-pen"></i>
+                </button>
+                <button class="remove-todo" type="button" aria-label="excluir">
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
+            </div>
+        </div>
+    </main>
+</body>
+</html>

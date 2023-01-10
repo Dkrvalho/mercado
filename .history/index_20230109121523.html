@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- JS -->
+    <script src="js/script.js" defer></script>
+    <!-- defer faz com que o js seja carregado após o html -->
+    <title>Lista de Compras</title>
+</head>
+    <main class="container">
+        <header>
+            <h1>Lista de Compras</h1>
+        </header>
+        <form id="form">
+            <p>Adicione o produto:</p>
+            <div class="form-control">
+                <input type="text" id="todo" placeholder="Qual produto comprar?">
+                <button type="submit">
+                    <i class="fa-thin fa-plus"></i>
+                </button>
+            </div>
+        </form>
+        <form id="edit-form">
+            <p>Edite o produto</p>
+            <div id="form-control">
+                <input type="text" id="edit">
+                <button type="submit">
+                    <i class="fa-solid fa-check-double"></i>
+                </button>
+            </div>
+        </form>
+        <div id="tollbar">
+            <div id="search">
+                <h4>Pesquisar:</h4>
+                <form>
+                    <input type="text" id="search">
+                </form>
+            </div>
+        </div>
+    </main>
+<body>
+    
+</body>
+</html>
